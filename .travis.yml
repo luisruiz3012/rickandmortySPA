@@ -1,4 +1,4 @@
-language: node.js
+language: node_js
 cache:
   directories:
     - ~/.npm
@@ -9,12 +9,12 @@ git:
 script: 
   - yarn build
 deploy:
-  provide: pages
+  provider: pages
   edge: true
   cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
-  local-dir: dist
+  local-dir: dist/
   target-branch: gh-pages
   commit_message: "Deploy Release"
   on:
